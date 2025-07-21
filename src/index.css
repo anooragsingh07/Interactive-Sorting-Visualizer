@@ -2,13 +2,61 @@
 @tailwind components;
 @tailwind utilities;
 
-body.dark {
+body {
     background: #222;
     color: #fff;
 }
-body.light {
+
+.light {
+    background: #fff !important;
+    color: #222 !important;
+}
+
+.dark {
+    background: #222 !important;
+    color: #fff !important;
+}
+
+.theme-toggle {
+    width: 48px;
+    height: 28px;
+    border-radius: 9999px;
+    background: #e5e7eb;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: 2px solid #cbd5e1;
+    position: relative;
+    transition: background 0.2s;
+}
+.theme-toggle.dark {
+    background: #2563eb;
+    border-color: #2563eb;
+}
+.theme-toggle-circle {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
     background: #fff;
-    color: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    transition: left 0.2s, background 0.2s;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+.theme-toggle.dark .theme-toggle-circle {
+    left: 22px;
+    background: #fff;
+}
+.theme-toggle-icon {
+    font-size: 16px;
+    color: #2563eb;
+}
+.theme-toggle.dark .theme-toggle-icon {
+    color: #2563eb;
 }
 
 .push-btn {
