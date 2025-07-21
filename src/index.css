@@ -214,3 +214,54 @@ body {
         transform: scaleY(0.4);
     }
 }
+
+.light .chart-container {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+.light .base {
+  background-color: rgba(0, 0, 0, 0.06);
+}
+.light .bar-idle {
+  background-color: rgba(40, 214, 192, 0.18);
+}
+.light .bar-idle:before {
+  background-color: rgba(40, 214, 192, 0.10);
+}
+.light .bar-idle:after {
+  background-color: rgba(40, 214, 192, 0.28);
+}
+.light .bar-selected {
+  background-color: rgba(254, 31, 78, 0.18);
+}
+.light .bar-selected:before {
+  background-color: rgba(254, 31, 78, 0.10);
+}
+.light .bar-selected:after {
+  background-color: rgba(254, 31, 78, 0.28);
+}
+.light .push-btn {
+  background: #2563eb;
+  color: #fff;
+  border: 1px solid #2563eb;
+  box-shadow: 0px 6px 0px #1e40af;
+}
+.light .push-btn:active {
+  box-shadow: 0px 2px 0px #1e40af;
+}
+.light table {
+  color: #222;
+}
+.light th, .light td {
+  border-color: #e5e7eb !important;
+}
+.light thead tr {
+  background: #f3f4f6;
+}
+.light tbody tr:hover {
+  background: #e0e7ef;
+}
+.light .bg-yellow-600 { background: #facc15 !important; color: #222 !important; }
+.light .bg-red-800 { background: #ef4444 !important; color: #fff !important; }
+.light .bg-orange-700 { background: #f59e42 !important; color: #222 !important; }
+.light .bg-green-800 { background: #22c55e !important; color: #fff !important; }
+.light .bg-lime-700 { background: #a3e635 !important; color: #222 !important; }
