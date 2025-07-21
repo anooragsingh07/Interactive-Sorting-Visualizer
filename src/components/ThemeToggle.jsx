@@ -1,40 +1,29 @@
 import React from "react";
 
-const SunIcon = ({ active }) => (
-  <svg width="48" height="48" viewBox="0 0 48 48">
-    <defs>
-      <radialGradient id="sunGradient" cx="50%" cy="50%" r="50%">
-        <stop offset="0%" stopColor="#fff59d"/>
-        <stop offset="100%" stopColor="#ff9800"/>
-      </radialGradient>
-    </defs>
-    <circle cx="24" cy="24" r="18" fill="url(#sunGradient)" filter={active ? "url(#glow)" : undefined} />
+const SunIcon = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFD600" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <circle cx="12" cy="12" r="5" fill="#FFD600"/>
   </svg>
 );
-
-const MoonIcon = ({ active }) => (
-  <svg width="48" height="48" viewBox="0 0 48 48">
-    <defs>
-      <radialGradient id="moonGradient" cx="50%" cy="50%" r="50%">
-        <stop offset="0%" stopColor="#e3f2fd"/>
-        <stop offset="100%" stopColor="#1976d2"/>
-      </radialGradient>
-    </defs>
-    <path d="M36 24c0 8-6.5 14-14 14 4-2 7-7 7-14s-3-12-7-14c7.5 0 14 6 14 14z" fill="url(#moonGradient)" filter={active ? "url(#glow)" : undefined} />
+const MoonIcon = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFD600" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z" fill="#353C49"/>
+    <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z" fill="#FFD600" fillOpacity="0.7"/>
   </svg>
 );
 
 export default function ThemeToggle({ theme, toggleTheme }) {
+  const isDark = theme === "dark";
   return (
     <button
-      className={`theme-toggle-pill${theme === "dark" ? " dark" : ""}`}
+      className={`theme-toggle-pill${isDark ? " dark" : ""}`}
       onClick={toggleTheme}
-      title={theme === "dark" ? "Switch to Light Mode" : "Switch to Dark Mode"}
+      title={isDark ? "Switch to Light Mode" : "Switch to Dark Mode"}
       aria-label="Toggle theme"
     >
-      <span className={`theme-toggle-icon-wrap${theme === "light" ? " active" : ""}`}> <SunIcon active={theme === "light"} /> </span>
-      <span className="theme-toggle-divider" />
-      <span className={`theme-toggle-icon-wrap${theme === "dark" ? " active" : ""}`}> <MoonIcon active={theme === "dark"} /> </span>
+      <div className={`theme-toggle-knob${isDark ? " dark" : ""}`}>
+        {isDark ? <MoonIcon /> : <SunIcon />}
+      </div>
     </button>
   );
 } 
