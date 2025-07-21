@@ -59,6 +59,28 @@ body {
     color: #2563eb;
 }
 
+.theme-toggle-round {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  border: 2px solid #e5e7eb;
+  cursor: pointer;
+  transition: background 0.2s, border 0.2s;
+  padding: 0;
+}
+.theme-toggle-round:hover {
+  background: #f3f4f6;
+  border-color: #2563eb;
+}
+.theme-toggle-round svg {
+  display: block;
+}
+
 .push-btn {
     position: relative;
     width: auto;
