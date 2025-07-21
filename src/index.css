@@ -2,9 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+body.dark {
     background: #222;
     color: #fff;
+}
+body.light {
+    background: #fff;
+    color: #222;
 }
 
 .push-btn {
