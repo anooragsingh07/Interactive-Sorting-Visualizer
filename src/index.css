@@ -59,26 +59,45 @@ body {
     color: #2563eb;
 }
 
-.theme-toggle-round {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: #fff;
+.theme-toggle-pill {
+  width: 120px;
+  height: 60px;
+  border-radius: 9999px;
+  background: #0a1122;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  cursor: pointer;
+  padding: 0 12px;
+  position: relative;
+  transition: background 0.2s;
+}
+.theme-toggle-pill .theme-toggle-icon-wrap {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  border: 2px solid #e5e7eb;
-  cursor: pointer;
-  transition: background 0.2s, border 0.2s;
-  padding: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  transition: box-shadow 0.2s, transform 0.2s;
 }
-.theme-toggle-round:hover {
-  background: #f3f4f6;
-  border-color: #2563eb;
+.theme-toggle-pill .theme-toggle-icon-wrap.active {
+  box-shadow: 0 0 12px 2px #ffd70055;
+  transform: scale(1.08);
+  background: rgba(255,255,255,0.08);
 }
-.theme-toggle-round svg {
-  display: block;
+.theme-toggle-pill .theme-toggle-divider {
+  width: 6px;
+  height: 36px;
+  background: #232b3b;
+  border-radius: 3px;
+  margin: 0 2px;
+  opacity: 0.7;
+}
+.theme-toggle-pill.dark .theme-toggle-icon-wrap.active {
+  box-shadow: 0 0 12px 2px #1976d288;
 }
 
 .push-btn {
